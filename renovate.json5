@@ -18,7 +18,7 @@
 
     /* Automerge minor or patch updates with very high merge confidence */
     {
-      "matchUpdateType": ["minor", "patch"],
+      "matchUpdateTypes": ["minor", "patch"],
       "matchConfidence": ["very high"],
       "automerge": true
     },
