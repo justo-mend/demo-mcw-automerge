@@ -10,13 +10,17 @@
       "commitMessagePrefix": "![confidence](https://badges.renovateapi.com/packages/{{datasource}}/{{replace '/' '%2f' depName}}/{{{toVersion}}}/confidence-slim/{{{fromVersion}}})  ",
     },
     
-    /* Group High and Very High Confidence updates */
+    /* Label High and Very High Confidence updates */
     {
-      "groupName": "high merge confidence",
-      "matchConfidence": ["high", "very high"]
+      "matchConfidence": ["high"],
+      "addLabels": ["confidence:high"]
+    },
+    {
+      "matchConfidence": ["very high"],
+      "addLabels": ["confidence:v-high"]
     },
 
-    /* Automerge minor or patch updates with very high merge confidence */
+    /* Auto-merge minor or patch updates with very high merge confidence */
     {
       "matchUpdateTypes": ["minor", "patch"],
       "matchConfidence": ["very high"],
